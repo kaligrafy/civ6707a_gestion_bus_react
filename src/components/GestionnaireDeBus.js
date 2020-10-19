@@ -5,6 +5,7 @@ class GestionnaireDeBus extends React.Component {
   
   constructor(props) {
 
+    console.log('constructor: GestionnaireDeBus');
     super(props);
 
     this.state = {
@@ -13,7 +14,12 @@ class GestionnaireDeBus extends React.Component {
 
   }
 
+  componentDidMount() {
+    console.log('componentDidMount: GestionnaireDeBus');
+  }
+
   render() {
+    console.log('render: GestionnaireDeBus');
     return (
       <React.Fragment>
         <h1>Gestionnaire de bus</h1>

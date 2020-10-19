@@ -1,4 +1,5 @@
-import React from 'react';
+import React          from 'react';
+import EtiquetteDeBus from './EtiquetteDeBus';
 
 export default class ListeDesBus extends React.Component {
 
@@ -11,7 +12,14 @@ export default class ListeDesBus extends React.Component {
   }
 
   render() {
-    return (<p>Liste des bus</p>);
+    return (
+      <React.Fragment>
+        <h2>Liste des bus</h2>
+        <div className="liste_des_bus">
+          <EtiquetteDeBus />
+        </div>
+      </React.Fragment>
+    );
   }
 
 }
