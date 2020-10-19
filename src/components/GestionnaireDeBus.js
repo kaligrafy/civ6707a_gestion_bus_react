@@ -1,4 +1,5 @@
-import React from 'react';
+import React       from 'react';
+import ListeDesBus from './ListeDesBus';
 
 class GestionnaireDeBus extends React.Component {
   
@@ -14,7 +15,10 @@ class GestionnaireDeBus extends React.Component {
 
   render() {
     return (
-      <p>Ceci est un test!</p>
+      <React.Fragment>
+        <h1>Gestionnaire de bus</h1>
+        <ListeDesBus />
+      </React.Fragment>
     );
   }
 
