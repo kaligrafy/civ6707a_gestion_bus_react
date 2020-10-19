@@ -1,4 +1,5 @@
 import React from 'react';
+import FormModifierBus from './FormModifierBus';
 
 export default class EtiquetteDeBus extends React.Component {
 
@@ -7,15 +8,20 @@ export default class EtiquetteDeBus extends React.Component {
     super(props);
 
     this.state = {
-
+      
     };
 
   }
 
   render() {
 
-    return (<p>{this.props.bus.id}: Immatriculation: {this.props.bus.immatriculation}</p>);
-  
+    return (
+      <React.Fragment>
+        <p>{this.props.bus.id}: Immatriculation: {this.props.bus.immatriculation}</p>
+        <FormModifierBus bus={this.props.bus} />
+      </React.Fragment>
+    );
+    
   }
 
 }
