@@ -14,8 +14,8 @@ export default class EtiquetteDeBus extends React.Component {
 
   render() {
 
-    return (<p>Mon bus</p>);
-
+  return (<p>{this.props.bus.id}: Immatriculation: {this.props.bus.immatriculation}</p>);
+  
   }
 
 }

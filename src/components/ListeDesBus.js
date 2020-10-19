@@ -12,12 +12,20 @@ export default class ListeDesBus extends React.Component {
   }
 
   render() {
-    console.log('ListeDesBus buses:', this.props.buses);
+
+    const etiquettesDeBus = [];
+
+    this.props.buses.forEach(function(bus, index) {
+      etiquettesDeBus.push(
+        <EtiquetteDeBus key={bus.id} bus={bus} />
+      );
+    });
+
     return (
       <React.Fragment>
         <h2>Liste des bus</h2>
         <div className="liste_des_bus">
-          <EtiquetteDeBus />
+          {etiquettesDeBus}
         </div>
       </React.Fragment>
     );
