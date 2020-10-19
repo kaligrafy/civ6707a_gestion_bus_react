@@ -54,7 +54,7 @@ export default class FormModifierBus extends React.Component {
 
   render() {
     return (
-      <form id="form_modifier_bus" onSubmit={this.onConfirmerChangements}>
+      <form id={`form_modifier_bus_${this.state.bus.id}`} onSubmit={this.onConfirmerChangements}>
 
         <label>Immatriculation</label>
         <input 
@@ -72,7 +72,7 @@ export default class FormModifierBus extends React.Component {
           value={this.state.bus.marque}
           onChange={this.onChangeMarque}
         />
-        <input type="submit" id="submit" value="Confirmer" />
+        <input type="submit" id={`confirmer_bus_${this.state.bus.id}`} value="Confirmer" />
         <button onClick={this.onSupprimerBus}>Supprimer ce bus</button>
       </form>
     );

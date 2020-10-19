@@ -15,6 +15,7 @@ export default class ListeDesBus extends React.Component {
   render() {
 
     const etiquettesDeBus = [];
+    const busesIds        = [];
 
     this.props.buses.forEach(function(bus, index) {
       etiquettesDeBus.push(
@@ -24,14 +25,21 @@ export default class ListeDesBus extends React.Component {
           mettreAJourBuses={this.props.mettreAJourBuses}
         />
       );
+      busesIds.push(bus.id);
     }.bind(this));
+
+    busesIds.sort();
+    const dernierId = busesIds[busesIds.length - 1];
 
     return (
       <React.Fragment>
         <h2>Liste des bus</h2>
         <div className="liste_des_bus">
           {etiquettesDeBus}
-          <BoutonAjouterUnBus />
+          <BoutonAjouterUnBus 
+            dernierId={dernierId}
+            mettreAJourBuses={this.props.mettreAJourBuses}
+          />
         </div>
       </React.Fragment>
     );

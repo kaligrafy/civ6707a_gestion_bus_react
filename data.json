@@ -1,16 +1,15 @@
 {
   "bus": [
     {
-      "id": "Bus1",
-      "immatriculation": "A12345"
+      "id": 1,
+      "immatriculation": "A12345",
+      "marque": "Scania"
     },
     {
-      "id": "Bus2",
-      "immatriculation": "A23456"
+      "id": 3
     },
     {
-      "id": "Bus3",
-      "immatriculation": "A34567"
+      "id": 4
     }
   ]
 }
