@@ -18,9 +18,13 @@ export default class ListeDesBus extends React.Component {
 
     this.props.buses.forEach(function(bus, index) {
       etiquettesDeBus.push(
-        <EtiquetteDeBus key={bus.id} bus={bus} />
+        <EtiquetteDeBus
+          key={bus.id}
+          bus={bus}
+          mettreAJourBuses={this.props.mettreAJourBuses}
+        />
       );
-    });
+    }.bind(this));
 
     return (
       <React.Fragment>

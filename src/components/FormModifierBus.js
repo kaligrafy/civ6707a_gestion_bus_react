@@ -37,6 +37,7 @@ export default class FormModifierBus extends React.Component {
     await fetch(`http://localhost:3000/bus/${this.state.bus.id}/`, {
       method: 'DELETE'
     });
+    this.props.mettreAJourBuses();
   }
 
   async onConfirmerChangements(event) {
@@ -48,6 +49,7 @@ export default class FormModifierBus extends React.Component {
       },
       body: JSON.stringify(this.state.bus)
     });
+    this.props.mettreAJourBuses();
   }
 
   render() {

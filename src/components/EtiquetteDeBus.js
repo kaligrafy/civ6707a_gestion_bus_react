@@ -18,7 +18,10 @@ export default class EtiquetteDeBus extends React.Component {
     return (
       <React.Fragment>
         <p>{this.props.bus.id}: Immatriculation: {this.props.bus.immatriculation}</p>
-        <FormModifierBus bus={this.props.bus} />
+        <FormModifierBus
+          bus={this.props.bus}
+          mettreAJourBuses={this.props.mettreAJourBuses}
+        />
       </React.Fragment>
     );
     

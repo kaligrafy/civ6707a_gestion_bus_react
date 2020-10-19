@@ -13,17 +13,21 @@ class GestionnaireDeBus extends React.Component {
       blabla: null
     };
 
+    this.mettreAJourBuses = this.mettreAJourBuses.bind(this);
+
   }
 
-  async componentDidMount() {
-    console.log('componentDidMount: GestionnaireDeBus');
+  componentDidMount() {
+    this.mettreAJourBuses();
+  }
+
+  async mettreAJourBuses() {
     const busesJson = await fetch("http://localhost:3000/bus", {});
     const buses     = await busesJson.json();
 
     this.setState({
       buses: buses
     });
-
   }
 
   render() {
@@ -31,7 +35,10 @@ class GestionnaireDeBus extends React.Component {
     return (
       <React.Fragment>
         <h1>Gestionnaire de bus</h1>
-        <ListeDesBus buses={this.state.buses} />
+        <ListeDesBus 
+          buses={this.state.buses}
+          mettreAJourBuses={this.mettreAJourBuses}
+        />
       </React.Fragment>
     );
   }
