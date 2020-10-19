@@ -1,0 +1,16 @@
+{
+  "bus": [
+    {
+      "id": "Bus1",
+      "immatriculation": "A12345"
+    },
+    {
+      "id": "Bus2",
+      "immatriculation": "A23456"
+    },
+    {
+      "id": "Bus3",
+      "immatriculation": "A34567"
+    }
+  ]
+}

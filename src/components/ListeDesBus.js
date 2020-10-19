@@ -12,6 +12,7 @@ export default class ListeDesBus extends React.Component {
   }
 
   render() {
+    console.log('ListeDesBus buses:', this.props.buses);
     return (
       <React.Fragment>
         <h2>Liste des bus</h2>
