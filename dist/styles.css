@@ -5,3 +5,8 @@ h1 {
 .titre {
   color: blue;
 }
+
+.carte {
+  width: 400px;
+  height: 400px;
+}

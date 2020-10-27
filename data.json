@@ -3,13 +3,28 @@
     {
       "id": 1,
       "immatriculation": "A12345",
-      "marque": "Scania"
+      "marque": "novabus",
+      "commentaires": "commentaires blabla",
+      "garageCoordinates": [
+        -73.60274658203119,
+        45.47070973667846
+      ]
     },
     {
-      "id": 3
+      "id": 3,
+      "marque": "volvo",
+      "garageCoordinates": [
+        -73.21273193359364,
+        45.56308699879668
+      ]
     },
     {
-      "id": 4
+      "id": 4,
+      "marque": "novabus",
+      "garageCoordinates": [
+        -73.63295898437434,
+        45.61690370347449
+      ]
     }
   ]
 }

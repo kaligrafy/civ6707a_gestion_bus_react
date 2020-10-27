@@ -20,6 +20,7 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin(envKeys)
   ],
+  devtool : 'eval-source-map',
   module: {
     rules: [
       {
